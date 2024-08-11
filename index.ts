@@ -15,7 +15,8 @@ interface user {
     birthDay?: number,
     birthYear?: number,
     hasHobby: boolean,
-    getData: (name: string, role: string) => void
+    getData: (name: string, role: string) => void,
+    setData: (name: string) => void
 }
 const programmer: user = {
     id: 2,
@@ -26,6 +27,11 @@ const programmer: user = {
     hasHobby: true,
     getData: (name, role) => {
         console.log(name + " has role: " + role)
+    },
+    setData: (name) => {
+        console.log(name)
     }
 }
 programmer.getData(programmer.name, programmer.role)
+programmer.setData('Tai')
+
